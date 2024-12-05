@@ -1,0 +1,263 @@
+@aconite(iconFolder="lu.uni.snt.besser.bpmn-agentic/svg/")
+@namespace(uri="http://lu.uni.snt.besser.bpmn-agentic", prefix="bpmnagentic")
+package BPMNagentic;
+
+@aconite.diagram(name = "BPD")
+class BusinessProcessDiagram {
+	val BPMNElement[*] elements;
+}
+
+class BPMNElement {
+	attr String name;
+}
+
+/* SWIMLANES */
+
+abstract class Swimlane extends BPMNElement {
+	
+}
+
+@aconite.container(name = "Lane", container = "BPD, Group, Pool")
+class Lane extends Swimlane {
+	val FlowObject[*] flowObjects;
+}
+
+@aconite.container(name = "AgenticLane", container = "BPD, Group, Pool")
+class AgenticLane extends Swimlane {
+	val FlowObject[*] flowObjects;
+	val AgentRole[1] agentRole;
+	attr double uncertainty;
+}
+
+@aconite.container(name = "Pool", container = "BPD, Group")
+class Pool extends Swimlane {
+	val Lane[*] lanes;
+	val AgenticLane[*] agenticLanes;
+}
+
+/* CONNECTING OBJECTS */
+
+@aconite.edge(container = "BPD", name="Link",~abstract = "true",  source = "from", target = "to", color = "black")
+abstract class ConnectingObject extends BPMNElement {
+	ref FlowObject from;
+	ref FlowObject to;
+}
+
+@aconite.edge(extend = "Link", lineStyle = "dash", name="Message Flow")
+class MessageFlow extends ConnectingObject {
+}
+
+@aconite.edge(extend = "Link", name="Sequence Flow")
+class SequenceFlow extends ConnectingObject {
+	
+}
+
+@aconite.edge(extend = "Link", lineStlye = "dot", name="Association")
+class Association extends ConnectingObject {
+	
+}
+
+/* FLOW OBJECTS */
+
+@aconite.node(~abstract = "true",container = "Lane, AgenticLane", name = "Flow", shape = "image", borderSize = "0")
+abstract class FlowObject extends BPMNElement {
+
+}
+
+abstract class Gateway extends FlowObject {
+	
+}
+
+@aconite.node(extend = "Flow", name = "XOR",  imagePath = "xor-gateway.svg")
+class XOR extends Gateway {
+	
+}
+
+@aconite.node(extend = "Flow", name = "OR",  imagePath = "or-gateway.svg")
+class OR extends Gateway {
+	
+}
+
+@aconite.node(extend = "Flow", name = "AND",  imagePath = "and-gateway.svg")
+class AND extends Gateway {
+}
+
+/* Agentic Gateways */
+
+
+@aconite.node(extend = "Flow", name = "AgenticGateway",  "abstract"="true", container="AgenticLane")
+class AgenticGateway extends Gateway {
+	attr double uncertainty;
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Diverging AgenticAND Role",  imagePath = "and-agentic-gateway-diverging-role.svg")
+class DivergingAgenticANDRole extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Diverging AgenticAND Voting",  imagePath = "and-agentic-gateway-diverging-voting.svg")
+class DivergingAgenticANDVoting extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Diverging AgenticAND Debate",  imagePath = "and-agentic-gateway-diverging-debate.svg")
+class DivergingAgenticANDDebate extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Diverging AgenticAND Competition",  imagePath = "and-agentic-gateway-diverging-Competition.svg")
+class DivergingAgenticANDCompetition extends AgenticGateway {
+}
+
+
+// Merging Gateways Icons are represented as PNG since the letters stating the strategy are not visible with SVG icons
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticAND Role Leader",  imagePath = "and-agentic-gateway-merging-r-l.png")
+class MergingAgenticANDRoleLeader extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticAND Role Composed",  imagePath = "and-agentic-gateway-merging-r-c.png")
+class MergingAgenticANDRoleComposed extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticAND Competition Fastest",  imagePath = "and-agentic-gateway-merging-c-f.png")
+class MergingAgenticANDCompetitionFastest extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticAND Competition MostComplete",  imagePath = "and-agentic-gateway-merging-c-mc.png")
+class MergingAgenticANDCompetitionMostComplete extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticAND Voting AbsoluteMajority",  imagePath = "and-agentic-gateway-merging-v-a.png")
+class MergingAgenticANDVotingAbsoluteMajority extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticAND Voting Majority",  imagePath = "and-agentic-gateway-merging-v-ma.png")
+class MergingAgenticANDVotingMajority extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticAND Voting Minority",  imagePath = "and-agentic-gateway-merging-v-mi.png")
+class MergingAgenticANDVotingMinority extends AgenticGateway {
+}
+
+
+@aconite.node(extend = "AgenticGateway", name = "Diverging AgenticOR Voting",  imagePath = "or-agentic-gateway-diverging-voting.svg")
+class DivergingAgenticORVoting extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Diverging AgenticOR Debate",  imagePath = "or-agentic-gateway-diverging-debate.svg")
+class DivergingAgenticORDebate extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Diverging AgenticOR Competition",  imagePath = "or-agentic-gateway-diverging-Competition.svg")
+class DivergingAgenticORCompetition extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticOR Role Leader",  imagePath = "or-agentic-gateway-merging-r-l.png")
+class MergingAgenticORRoleLeader extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticOR Role Composed",  imagePath = "or-agentic-gateway-merging-r-c.png")
+class MergingAgenticORRoleComposed extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticOR Competition Fastest",  imagePath = "or-agentic-gateway-merging-c-f.png")
+class MergingAgenticORCompetitionFastest extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticOR Competition MostComplete",  imagePath = "or-agentic-gateway-merging-c-mc.png")
+class MergingAgenticORCompetitionMostComplete extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticOR Voting AbsoluteMajority",  imagePath = "or-agentic-gateway-merging-v-a.png")
+class MergingAgenticORVotingAbsoluteMajority extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticOR Voting Majority",  imagePath = "or-agentic-gateway-merging-v-ma.png")
+class MergingAgenticORVotingMajority extends AgenticGateway {
+}
+
+@aconite.node(extend = "AgenticGateway", name = "Merging AgenticOR Voting Minority",  imagePath = "or-agentic-gateway-merging-v-mi.png")
+class MergingAgenticORVotingMinority extends AgenticGateway {
+}
+
+/* Events */
+
+@aconite.node(extend = "Flow", name = "Start Event",  imagePath = "start-event.svg")
+class StartEvent extends FlowObject {
+}
+
+@aconite.node(extend = "Flow", name = "Intermediate Event",  imagePath = "intermediate-event.svg")
+class IntermediateEvent extends FlowObject {
+}
+
+@aconite.node(extend = "Flow", name = "End Event",  imagePath = "end-event.svg")
+class EndEvent extends FlowObject {
+}
+
+// Activity is used as atomic task
+@aconite.node(name = "Activity", container = "Lane, AgenticLane")
+class Activity extends FlowObject {
+
+}
+
+@aconite.container(name = "AgenticTask", container = "AgenticLane")
+class AgenticTask extends FlowObject {
+	val Agentic[1] agentic; // agent Icon
+	val ReflectionMode[1] reflectionMode;
+	attr double uncertainty;
+}
+
+/* ARTIFACTS */
+
+abstract class Artifact extends BPMNElement {
+	
+}
+
+@aconite.node(container = "Lane", name="Data Object", shape = "image", imagePath = "data-object.svg")
+class DataObject extends Artifact {
+	
+}
+
+@aconite.container(container = "BPD", name = "Group")
+class Group extends Artifact {
+	val BPMNElement[*] elements;
+}
+
+/* AgenticBPMN notation */
+
+//Agent notation
+
+@aconite.node(name="Agent", borderSize="0", shape="image", "abstract"="true")
+abstract class Agent extends BPMNElement {
+}
+
+@aconite.node(extend="Agent", name="Agentic", container="AgenticTask", imagePath="agent.svg")
+class Agentic extends Agent {
+}
+
+@aconite.node(extend="Agent", container="AgenticLane", name="AgentRole", "abstract"="true")
+abstract class AgentRole extends Agent {
+}
+
+@aconite.node(extend="AgentRole",name="AgentWorker", imagePath="agent-worker.svg")
+class AgentWorker extends AgentRole {
+}
+
+@aconite.node(extend="AgentRole",name="AgentManager", imagePath="agent-manager.svg")
+class AgentManager extends AgentRole {
+}
+
+// Reflection notation
+
+@aconite.node(name="ReflectionMode", "abstract"="true", container="AgenticTask", shape="image", borderSize="0")
+abstract class ReflectionMode extends BPMNElement {
+}
+
+@aconite.node(name="SelfReflection", extend="ReflectionMode", imagePath="reflection-self.svg")
+class SelfReflection extends ReflectionMode {
+}
+
+@aconite.node(name="CrossReflection", extend="ReflectionMode", imagePath="reflection-cross.svg")
+class CrossReflection extends ReflectionMode {
+}
+
+@aconite.node(name="HumanReflection", extend="ReflectionMode", imagePath="reflection-human.svg")
+class HumanReflection extends ReflectionMode {
+}

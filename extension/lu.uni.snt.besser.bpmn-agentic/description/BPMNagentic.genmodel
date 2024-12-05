@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/lu.uni.snt.besser.bpmn-agentic/src" modelPluginID="lu.uni.snt.besser.bpmn-agentic"
+    modelName="BPMNagentic" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="22.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>BPMNagentic.ecore</foreignModel>
+  <genPackages prefix="BPMNagentic" disposableProviderFactory="true" ecorePackage="BPMNagentic.ecore#/">
+    <genClasses ecoreClass="BPMNagentic.ecore#//BusinessProcessDiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BPMNagentic.ecore#//BusinessProcessDiagram/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="BPMNagentic.ecore#//BPMNElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMNagentic.ecore#//BPMNElement/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="BPMNagentic.ecore#//Swimlane"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//Lane">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BPMNagentic.ecore#//Lane/flowObjects"/>
+    </genClasses>
+    <genClasses ecoreClass="BPMNagentic.ecore#//AgenticLane">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BPMNagentic.ecore#//AgenticLane/flowObjects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BPMNagentic.ecore#//AgenticLane/agentRole"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMNagentic.ecore#//AgenticLane/uncertainty"/>
+    </genClasses>
+    <genClasses ecoreClass="BPMNagentic.ecore#//Pool">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BPMNagentic.ecore#//Pool/lanes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BPMNagentic.ecore#//Pool/agenticLanes"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="BPMNagentic.ecore#//ConnectingObject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BPMNagentic.ecore#//ConnectingObject/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BPMNagentic.ecore#//ConnectingObject/to"/>
+    </genClasses>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MessageFlow"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//SequenceFlow"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//Association"/>
+    <genClasses image="false" ecoreClass="BPMNagentic.ecore#//FlowObject"/>
+    <genClasses image="false" ecoreClass="BPMNagentic.ecore#//Gateway"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//XOR"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//OR"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//AND"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//AgenticGateway">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMNagentic.ecore#//AgenticGateway/uncertainty"/>
+    </genClasses>
+    <genClasses ecoreClass="BPMNagentic.ecore#//DivergingAgenticANDRole"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//DivergingAgenticANDVoting"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//DivergingAgenticANDDebate"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//DivergingAgenticANDCompetition"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticANDRoleLeader"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticANDRoleComposed"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticANDCompetitionFastest"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticANDCompetitionMostComplete"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticANDVotingAbsoluteMajority"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticANDVotingMajority"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticANDVotingMinority"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//DivergingAgenticORVoting"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//DivergingAgenticORDebate"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//DivergingAgenticORCompetition"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticORRoleLeader"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticORRoleComposed"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticORCompetitionFastest"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticORCompetitionMostComplete"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticORVotingAbsoluteMajority"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticORVotingMajority"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//MergingAgenticORVotingMinority"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//StartEvent"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//IntermediateEvent"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//EndEvent"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//Activity"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//AgenticTask">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BPMNagentic.ecore#//AgenticTask/agentic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BPMNagentic.ecore#//AgenticTask/reflectionMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMNagentic.ecore#//AgenticTask/uncertainty"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="BPMNagentic.ecore#//Artifact"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//DataObject"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//Group">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BPMNagentic.ecore#//Group/elements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="BPMNagentic.ecore#//Agent"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//Agentic"/>
+    <genClasses image="false" ecoreClass="BPMNagentic.ecore#//AgentRole"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//AgentWorker"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//AgentManager"/>
+    <genClasses image="false" ecoreClass="BPMNagentic.ecore#//ReflectionMode"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//SelfReflection"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//CrossReflection"/>
+    <genClasses ecoreClass="BPMNagentic.ecore#//HumanReflection"/>
+  </genPackages>
+</genmodel:GenModel>

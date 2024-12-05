@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated BPMNagentic -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="BPMNagentic.presentation.BPMNagenticModelWizardID"
+            name="%_UI_BPMNagenticModelWizard_label"
+            class="BPMNagentic.presentation.BPMNagenticModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BPMNagenticModelFile.gif">
+         <description>%_UI_BPMNagenticModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated BPMNagentic -->
+      <editor
+            id="BPMNagentic.presentation.BPMNagenticEditorID"
+            name="%_UI_BPMNagenticEditor_label"
+            icon="icons/full/obj16/BPMNagenticModelFile.gif"
+            extensions="bpmnagentic"
+            class="BPMNagentic.presentation.BPMNagenticEditor"
+            contributorClass="BPMNagentic.presentation.BPMNagenticActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

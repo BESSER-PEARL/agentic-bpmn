@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="BPMNagentic" nsURI="http://lu.uni.snt.besser.bpmn-agentic" nsPrefix="bpmnagentic">
+  <eAnnotations source="aconite">
+    <details key="iconFolder" value="lu.uni.snt.besser.bpmn-agentic/svg/"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessProcessDiagram">
+    <eAnnotations source="aconite.diagram">
+      <details key="name" value="BPD"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//BPMNElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BPMNElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Swimlane" abstract="true" eSuperTypes="#//BPMNElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Lane" eSuperTypes="#//Swimlane">
+    <eAnnotations source="aconite.container">
+      <details key="name" value="Lane"/>
+      <details key="container" value="BPD, Group, Pool"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowObjects" upperBound="-1"
+        eType="#//FlowObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AgenticLane" eSuperTypes="#//Swimlane">
+    <eAnnotations source="aconite.container">
+      <details key="name" value="AgenticLane"/>
+      <details key="container" value="BPD, Group, Pool"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowObjects" upperBound="-1"
+        eType="#//FlowObject" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="agentRole" lowerBound="1"
+        eType="#//AgentRole" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uncertainty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pool" eSuperTypes="#//Swimlane">
+    <eAnnotations source="aconite.container">
+      <details key="name" value="Pool"/>
+      <details key="container" value="BPD, Group"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lanes" upperBound="-1"
+        eType="#//Lane" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="agenticLanes" upperBound="-1"
+        eType="#//AgenticLane" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectingObject" abstract="true" eSuperTypes="#//BPMNElement">
+    <eAnnotations source="aconite.edge">
+      <details key="container" value="BPD"/>
+      <details key="name" value="Link"/>
+      <details key="abstract" value="true"/>
+      <details key="source" value="from"/>
+      <details key="target" value="to"/>
+      <details key="color" value="black"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//FlowObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//FlowObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MessageFlow" eSuperTypes="#//ConnectingObject">
+    <eAnnotations source="aconite.edge">
+      <details key="extend" value="Link"/>
+      <details key="lineStyle" value="dash"/>
+      <details key="name" value="Message Flow"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SequenceFlow" eSuperTypes="#//ConnectingObject">
+    <eAnnotations source="aconite.edge">
+      <details key="extend" value="Link"/>
+      <details key="name" value="Sequence Flow"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//ConnectingObject">
+    <eAnnotations source="aconite.edge">
+      <details key="extend" value="Link"/>
+      <details key="lineStlye" value="dot"/>
+      <details key="name" value="Association"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowObject" abstract="true" eSuperTypes="#//BPMNElement">
+    <eAnnotations source="aconite.node">
+      <details key="abstract" value="true"/>
+      <details key="container" value="Lane, AgenticLane"/>
+      <details key="name" value="Flow"/>
+      <details key="shape" value="image"/>
+      <details key="borderSize" value="0"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Gateway" abstract="true" eSuperTypes="#//FlowObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="XOR" eSuperTypes="#//Gateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="Flow"/>
+      <details key="name" value="XOR"/>
+      <details key="imagePath" value="xor-gateway.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OR" eSuperTypes="#//Gateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="Flow"/>
+      <details key="name" value="OR"/>
+      <details key="imagePath" value="or-gateway.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AND" eSuperTypes="#//Gateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="Flow"/>
+      <details key="name" value="AND"/>
+      <details key="imagePath" value="and-gateway.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AgenticGateway" eSuperTypes="#//Gateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="Flow"/>
+      <details key="name" value="AgenticGateway"/>
+      <details key="abstract" value="true"/>
+      <details key="container" value="AgenticLane"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uncertainty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DivergingAgenticANDRole" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Diverging AgenticAND Role"/>
+      <details key="imagePath" value="and-agentic-gateway-diverging-role.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DivergingAgenticANDVoting" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Diverging AgenticAND Voting"/>
+      <details key="imagePath" value="and-agentic-gateway-diverging-voting.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DivergingAgenticANDDebate" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Diverging AgenticAND Debate"/>
+      <details key="imagePath" value="and-agentic-gateway-diverging-debate.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DivergingAgenticANDCompetition" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Diverging AgenticAND Competition"/>
+      <details key="imagePath" value="and-agentic-gateway-diverging-Competition.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticANDRoleLeader" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticAND Role Leader"/>
+      <details key="imagePath" value="and-agentic-gateway-merging-r-l.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticANDRoleComposed" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticAND Role Composed"/>
+      <details key="imagePath" value="and-agentic-gateway-merging-r-c.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticANDCompetitionFastest"
+      eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticAND Competition Fastest"/>
+      <details key="imagePath" value="and-agentic-gateway-merging-c-f.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticANDCompetitionMostComplete"
+      eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticAND Competition MostComplete"/>
+      <details key="imagePath" value="and-agentic-gateway-merging-c-mc.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticANDVotingAbsoluteMajority"
+      eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticAND Voting AbsoluteMajority"/>
+      <details key="imagePath" value="and-agentic-gateway-merging-v-a.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticANDVotingMajority" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticAND Voting Majority"/>
+      <details key="imagePath" value="and-agentic-gateway-merging-v-ma.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticANDVotingMinority" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticAND Voting Minority"/>
+      <details key="imagePath" value="and-agentic-gateway-merging-v-mi.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DivergingAgenticORVoting" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Diverging AgenticOR Voting"/>
+      <details key="imagePath" value="or-agentic-gateway-diverging-voting.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DivergingAgenticORDebate" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Diverging AgenticOR Debate"/>
+      <details key="imagePath" value="or-agentic-gateway-diverging-debate.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DivergingAgenticORCompetition" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Diverging AgenticOR Competition"/>
+      <details key="imagePath" value="or-agentic-gateway-diverging-Competition.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticORRoleLeader" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticOR Role Leader"/>
+      <details key="imagePath" value="or-agentic-gateway-merging-r-l.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticORRoleComposed" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticOR Role Composed"/>
+      <details key="imagePath" value="or-agentic-gateway-merging-r-c.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticORCompetitionFastest"
+      eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticOR Competition Fastest"/>
+      <details key="imagePath" value="or-agentic-gateway-merging-c-f.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticORCompetitionMostComplete"
+      eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticOR Competition MostComplete"/>
+      <details key="imagePath" value="or-agentic-gateway-merging-c-mc.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticORVotingAbsoluteMajority"
+      eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticOR Voting AbsoluteMajority"/>
+      <details key="imagePath" value="or-agentic-gateway-merging-v-a.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticORVotingMajority" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticOR Voting Majority"/>
+      <details key="imagePath" value="or-agentic-gateway-merging-v-ma.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergingAgenticORVotingMinority" eSuperTypes="#//AgenticGateway">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgenticGateway"/>
+      <details key="name" value="Merging AgenticOR Voting Minority"/>
+      <details key="imagePath" value="or-agentic-gateway-merging-v-mi.png"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StartEvent" eSuperTypes="#//FlowObject">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="Flow"/>
+      <details key="name" value="Start Event"/>
+      <details key="imagePath" value="start-event.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntermediateEvent" eSuperTypes="#//FlowObject">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="Flow"/>
+      <details key="name" value="Intermediate Event"/>
+      <details key="imagePath" value="intermediate-event.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EndEvent" eSuperTypes="#//FlowObject">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="Flow"/>
+      <details key="name" value="End Event"/>
+      <details key="imagePath" value="end-event.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="#//FlowObject">
+    <eAnnotations source="aconite.node">
+      <details key="name" value="Activity"/>
+      <details key="container" value="Lane, AgenticLane"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AgenticTask" eSuperTypes="#//FlowObject">
+    <eAnnotations source="aconite.container">
+      <details key="name" value="AgenticTask"/>
+      <details key="container" value="AgenticLane"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="agentic" lowerBound="1"
+        eType="#//Agentic" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reflectionMode" lowerBound="1"
+        eType="#//ReflectionMode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uncertainty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Artifact" abstract="true" eSuperTypes="#//BPMNElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataObject" eSuperTypes="#//Artifact">
+    <eAnnotations source="aconite.node">
+      <details key="container" value="Lane"/>
+      <details key="name" value="Data Object"/>
+      <details key="shape" value="image"/>
+      <details key="imagePath" value="data-object.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Group" eSuperTypes="#//Artifact">
+    <eAnnotations source="aconite.container">
+      <details key="container" value="BPD"/>
+      <details key="name" value="Group"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//BPMNElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Agent" abstract="true" eSuperTypes="#//BPMNElement">
+    <eAnnotations source="aconite.node">
+      <details key="name" value="Agent"/>
+      <details key="borderSize" value="0"/>
+      <details key="shape" value="image"/>
+      <details key="abstract" value="true"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Agentic" eSuperTypes="#//Agent">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="Agent"/>
+      <details key="name" value="Agentic"/>
+      <details key="container" value="AgenticTask"/>
+      <details key="imagePath" value="agent.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AgentRole" abstract="true" eSuperTypes="#//Agent">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="Agent"/>
+      <details key="container" value="AgenticLane"/>
+      <details key="name" value="AgentRole"/>
+      <details key="abstract" value="true"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AgentWorker" eSuperTypes="#//AgentRole">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgentRole"/>
+      <details key="name" value="AgentWorker"/>
+      <details key="imagePath" value="agent-worker.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AgentManager" eSuperTypes="#//AgentRole">
+    <eAnnotations source="aconite.node">
+      <details key="extend" value="AgentRole"/>
+      <details key="name" value="AgentManager"/>
+      <details key="imagePath" value="agent-manager.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReflectionMode" abstract="true" eSuperTypes="#//BPMNElement">
+    <eAnnotations source="aconite.node">
+      <details key="name" value="ReflectionMode"/>
+      <details key="abstract" value="true"/>
+      <details key="container" value="AgenticTask"/>
+      <details key="shape" value="image"/>
+      <details key="borderSize" value="0"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SelfReflection" eSuperTypes="#//ReflectionMode">
+    <eAnnotations source="aconite.node">
+      <details key="name" value="SelfReflection"/>
+      <details key="extend" value="ReflectionMode"/>
+      <details key="imagePath" value="reflection-self.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CrossReflection" eSuperTypes="#//ReflectionMode">
+    <eAnnotations source="aconite.node">
+      <details key="name" value="CrossReflection"/>
+      <details key="extend" value="ReflectionMode"/>
+      <details key="imagePath" value="reflection-cross.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HumanReflection" eSuperTypes="#//ReflectionMode">
+    <eAnnotations source="aconite.node">
+      <details key="name" value="HumanReflection"/>
+      <details key="extend" value="ReflectionMode"/>
+      <details key="imagePath" value="reflection-human.svg"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>
