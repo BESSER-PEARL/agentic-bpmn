@@ -1,24 +1,35 @@
-# Template for BESSER-PEARL Organization Repositories
+This repository provides the implementation of the BPMN extension proposed in the paper *"Towards Modeling Human-Agentic Collaborative Workflows: A BPMN Extension"*, submitted to the International Conference on Advanced Information Systems Engineering (CAiSE) 2025.
 
-This Github template provides a collection of base files and configuration recommendations for kick-starting a new project in the BESSER-PEARL organization.
+# Contents
 
-## ⚒️ Using this template for your project
+## `extension` folder
 
-To use this template when creating a new repository in the BESSER-PEARL GitHub organization, you have to set the `Repository template` field to `BESSER-PEARL/template`.
+Folder `extension` contains the Eclipse project defining the BPMN extension using [Aconite](https://github.com/nwxrichardson/aconite).
+Aconite is a tool that generates graphical modelling notations from an annotated Ecore metamodel.
+The requirements to run the code are:
 
-The new repository will use this one as a template, meaning that it will contain all the files. 
-Once the new repository is created, you can edit its files to adapt them to your needs.
+* [Eclipse Modeling Tools](https://www.eclipse.org/downloads/packages/) 2024-09 or newer
+* Java 17+
+* [Eclipse Epsilon](https://eclipse.dev/epsilon/) 2.5.0+
+* [Eclipse Emfatic](https://eclipse.dev/emfatic/) 1.1+
+* [Eclipse Sirius](https://eclipse.dev/sirius/) 7.x
 
-## ☑️ Guidelines & Contributing
+To run the tool, set up the Eclipse IDE following [this instructions](https://github.com/nwxrichardson/aconite?tab=readme-ov-file#setting-up-the-eclipse-ide).
+Then clone the repository and import the project in the `extension` folder into your Eclipse workspace, by clicking on the "File > Import" menu item and selecting "General > Existing Projects into Workspace". 
+Find the downloaded subdirectory and import these four projects:
 
-You will find a guided description of the steps you should follow in the [guidelines](guidelines.md) file.
+* lu.uni.snt.besser.bpmn-agentic
+* lu.uni.snt.besser.bpmn-agentic.edit
+* lu.uni.snt.besser.bpmn-agentic.editor
+* lu.uni.snt.besser.bpmn-agentic.tests
 
-## 📓 Publishing the documentation to ReadTheDocs
+Right-click on lu.uni.snt.besser.bpmn-agentic and click "Run As... > Eclipse Application". 
+This will open a nested ("runtime") Eclipse, into which we import only lu.uni.snt.besser.bpmn-agentic by clicking on the "File > Import" menu item and selecting "General > Existing Projects into Workspace" unticking the other projects.
 
-This template also provides the base files to deploy the repository documentation using [ReadTheDocs](https://docs.readthedocs.io/en/stable/index.html). In the `docs` folder you can find and edit all the Sphinx documentation sources. You can check the documentation generated from this template at the [following link](https://besser-template.readthedocs.io/en/latest/). 
+The representation of the running example is in the `model` folder.
+In the "Model explorer" view expand the `model` folder, then select the `representation.aird` file.
+In the "Representations" list expand the "BPD" and double-click on "Running Example".
+Then, the running example should be displayed as in the following screenshot:
 
-For more information on how to connect your repository, customize, and deploy the documentation with ReadTheDocs, you can follow [this tutorial](https://docs.readthedocs.io/en/stable/tutorial/index.html). If you do not plan to use ReadTheDocs, remove the `docs` folder and the `.readthedocs.yaml` file from your repository.
+![aconite-example](https://github.com/user-attachments/assets/d33ce55f-ac98-4a77-96bc-2f6ca1b1ee8b)
 
-## 📚 References
-
-This project is an extended and adapted version (to the [BESSER-PEARL organization](https://github.com/organizations/BESSER-PEARL/)) of the [GitHub Best Practices Template](https://github.com/jlcanovas/gh-best-practices-template.git)
