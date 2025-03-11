@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:lu.uni.snt.besser.bpmn-agentic="http://lu.uni.snt.besser.bpmn-agentic" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmnagentic="http://lu.uni.snt.besser.bpmn-agentic" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="_ZKXewLJOEe-e5YLNC5BUYQ" selectedViews="_ig7MMLJTEe-UELN-fG9TRQ" version="15.4.1.202403191723">
     <semanticResources>model/My.bpmnagentic</semanticResources>
     <semanticResources>My.bpmnagentic</semanticResources>
@@ -9,7 +9,11 @@
       <viewpoint xmi:type="description:Viewpoint" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_jdb3wLJTEe-UELN-fG9TRQ" name="Running Example" repPath="#_jczloLJTEe-UELN-fG9TRQ" changeId="1733326905252">
         <description xmi:type="description_1:DiagramDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']"/>
-        <target xmi:type="lu.uni.snt.besser.bpmn-agentic:BusinessProcessDiagram" href="My.bpmnagentic#/"/>
+        <target xmi:type="bpmnagentic:BusinessProcessDiagram" href="My.bpmnagentic#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_KdA8cP6gEe-CRIGIm70ErA" name="self-collaboration" repPath="#_Kc0vMP6gEe-CRIGIm70ErA" changeId="1741715442427">
+        <description xmi:type="description_1:DiagramDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']"/>
+        <target xmi:type="bpmnagentic:BusinessProcessDiagram" href="My.bpmnagentic#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
@@ -481,6 +485,8 @@
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_jeXE0LJTEe-UELN-fG9TRQ"/>
     </ownedAnnotationEntries>
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_q8SO8LJTEe-UELN-fG9TRQ" name="Project Repository">
+      <target xmi:type="bpmnagentic:Pool" href="My.bpmnagentic#//@elements.0"/>
+      <semanticElements xmi:type="bpmnagentic:Pool" href="My.bpmnagentic#//@elements.0"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_q8XHcLJTEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" backgroundColor="255,245,181" foregroundColor="255,245,181">
         <description xmi:type="style:FlatContainerStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@style"/>
       </ownedStyle>
@@ -495,19 +501,13 @@
             <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane%20-%20Pool%20-%20Lane%20-%20Start%20Event']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane%20-%20Pool%20-%20Lane%20-%20Start%20Event']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:StartEvent" href="My.bpmnagentic#//@elements.0/@lanes.0/@flowObjects.0"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:StartEvent" href="My.bpmnagentic#//@elements.0/@lanes.0/@flowObjects.0"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" uid="_8PRu0LJVEe-UELN-fG9TRQ" name="Submit bug report" outgoingEdges="_BUbqwLJWEe-UELN-fG9TRQ" incomingEdges="_AqjAQLJWEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
           <ownedStyle xmi:type="diagram:Square" uid="_8PSV4LJVEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" labelPosition="node" color="255,245,181">
             <description xmi:type="style:SquareDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane%20-%20Pool%20-%20Lane%20-%20Activity']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane%20-%20Pool%20-%20Lane%20-%20Activity']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:Activity" href="My.bpmnagentic#//@elements.0/@lanes.0/@flowObjects.1"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:Activity" href="My.bpmnagentic#//@elements.0/@lanes.0/@flowObjects.1"/>
         </ownedDiagramElements>
-        <target xmi:type="lu.uni.snt.besser.bpmn-agentic:Lane" href="My.bpmnagentic#//@elements.0/@lanes.0"/>
-        <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:Lane" href="My.bpmnagentic#//@elements.0/@lanes.0"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_3I25gLJTEe-UELN-fG9TRQ" name="Maintainer">
         <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_3I25gbJTEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" backgroundColor="255,245,181" foregroundColor="255,245,181">
@@ -519,21 +519,17 @@
             <description xmi:type="style:SquareDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane%20-%20Pool%20-%20Lane%20-%20Activity']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane%20-%20Pool%20-%20Lane%20-%20Activity']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:Activity" href="My.bpmnagentic#//@elements.0/@lanes.1/@flowObjects.0"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:Activity" href="My.bpmnagentic#//@elements.0/@lanes.1/@flowObjects.0"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" uid="_q2T34LJVEe-UELN-fG9TRQ" name="Bug resolved as resolved" incomingEdges="_RCthhLJWEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
           <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_q2T34bJVEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/end-event.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane%20-%20Pool%20-%20Lane%20-%20End%20Event']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20Lane%20-%20Pool%20-%20Lane%20-%20End%20Event']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:EndEvent" href="My.bpmnagentic#//@elements.0/@lanes.1/@flowObjects.1"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:EndEvent" href="My.bpmnagentic#//@elements.0/@lanes.1/@flowObjects.1"/>
         </ownedDiagramElements>
-        <target xmi:type="lu.uni.snt.besser.bpmn-agentic:Lane" href="My.bpmnagentic#//@elements.0/@lanes.1"/>
-        <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:Lane" href="My.bpmnagentic#//@elements.0/@lanes.1"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_CSkY4LJUEe-UELN-fG9TRQ" name="AgentReviewer">
+        <target xmi:type="bpmnagentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.0"/>
+        <semanticElements xmi:type="bpmnagentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.0"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_CSkY4bJUEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" backgroundColor="255,245,181" foregroundColor="255,245,181">
           <description xmi:type="style:FlatContainerStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@style"/>
         </ownedStyle>
@@ -543,256 +539,849 @@
             <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgentManager']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgentManager']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:AgentManager" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@agentRole"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:AgentManager" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@agentRole"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" uid="_hFZM4LJUEe-UELN-fG9TRQ" name="Label report" outgoingEdges="_Dg139LJWEe-UELN-fG9TRQ" incomingEdges="_BUbqwLJWEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
           <ownedStyle xmi:type="diagram:Square" uid="_hFcQMLJUEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" labelPosition="node" color="255,245,181">
             <description xmi:type="style:SquareDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" uid="_Ej5s4LJVEe-UELN-fG9TRQ" name="Assign bug to coders" outgoingEdges="_KDoPiLJWEe-UELN-fG9TRQ" incomingEdges="_FdJzoLJWEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.2"/>
+          <semanticElements xmi:type="bpmnagentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.2"/>
           <ownedStyle xmi:type="diagram:Square" uid="_Ej5s4bJVEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" labelPosition="node" color="255,245,181">
             <description xmi:type="style:SquareDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.3"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.3"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_lYCt0LJUEe-UELN-fG9TRQ" name="Check bug validity" outgoingEdges="_EK3sYLJWEe-UELN-fG9TRQ" incomingEdges="_Dg139LJWEe-UELN-fG9TRQ">
+          <target xmi:type="bpmnagentic:AgenticTask" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0"/>
+          <semanticElements xmi:type="bpmnagentic:AgenticTask" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0"/>
           <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_lYCt0bJUEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" backgroundColor="255,245,181" foregroundColor="255,245,181">
             <customFeatures>labelAlignment</customFeatures>
             <description xmi:type="style:FlatContainerStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']"/>
           <ownedDiagramElements xmi:type="diagram:DNode" uid="_r5FY8LJUEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
+            <target xmi:type="bpmnagentic:SelfReflection" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0/@reflectionMode"/>
+            <semanticElements xmi:type="bpmnagentic:SelfReflection" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0/@reflectionMode"/>
             <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_r5FY8bJUEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/reflection-self.svg">
               <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20SelfReflection']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20SelfReflection']"/>
-            <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SelfReflection" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.1/@reflectionMode"/>
-            <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SelfReflection" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.1/@reflectionMode"/>
           </ownedDiagramElements>
           <ownedDiagramElements xmi:type="diagram:DNode" uid="_tYLNILJUEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
+            <target xmi:type="bpmnagentic:Agentic" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0/@agentic"/>
+            <semanticElements xmi:type="bpmnagentic:Agentic" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0/@agentic"/>
             <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_tYL0MLJUEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/agent.svg">
               <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Agentic']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Agentic']"/>
-            <target xmi:type="lu.uni.snt.besser.bpmn-agentic:Agentic" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.1/@agentic"/>
-            <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:Agentic" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.1/@agentic"/>
           </ownedDiagramElements>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:AgenticTask" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.1"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:AgenticTask" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.1"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" uid="_64hzwLJUEe-UELN-fG9TRQ" name="valid?" outgoingEdges="_E2rCcLJWEe-UELN-fG9TRQ _FdJzoLJWEe-UELN-fG9TRQ" incomingEdges="_EK3sYLJWEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:XOR" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.1"/>
+          <semanticElements xmi:type="bpmnagentic:XOR" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.1"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_64hzwbJUEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/xor-gateway.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20XOR']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20XOR']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:XOR" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.2"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:XOR" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.2"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" uid="_Jk2eQLJVEe-UELN-fG9TRQ" name="bug resolved as invalid" incomingEdges="_E2rCcLJWEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:EndEvent" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.3"/>
+          <semanticElements xmi:type="bpmnagentic:EndEvent" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.3"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_Jk2eQbJVEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/end-event.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20End%20Event']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20End%20Event']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:EndEvent" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.4"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:EndEvent" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.4"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" uid="_SBwZILJVEe-UELN-fG9TRQ" outgoingEdges="_PSFRaLJWEe-UELN-fG9TRQ" incomingEdges="_M_9d0LJWEe-UELN-fG9TRQ _OCDM5LJWEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
           <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_SBwZIbJVEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/and-agentic-gateway-merging-r-l.png">
             <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Merging%20AgenticAND%20Role%20Leader']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Merging%20AgenticAND%20Role%20Leader']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:MergingAgenticANDRoleLeader" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.5"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:MergingAgenticANDRoleLeader" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.5"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" uid="_UJ80sLJVEe-UELN-fG9TRQ" outgoingEdges="_K6YRXLJWEe-UELN-fG9TRQ _L-WPzLJWEe-UELN-fG9TRQ" incomingEdges="_KDoPiLJWEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
           <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_UJ9bwLJVEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/and-agentic-gateway-diverging-role.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Diverging%20AgenticAND%20Role']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Diverging%20AgenticAND%20Role']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:DivergingAgenticANDRole" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.6"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:DivergingAgenticANDRole" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.6"/>
         </ownedDiagramElements>
-        <target xmi:type="lu.uni.snt.besser.bpmn-agentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.0"/>
-        <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.0"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_FOrksLJUEe-UELN-fG9TRQ" name="AgentCoder1">
+        <target xmi:type="bpmnagentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.1"/>
+        <semanticElements xmi:type="bpmnagentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.1"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_FOrksbJUEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" backgroundColor="255,245,181" foregroundColor="255,245,181">
           <description xmi:type="style:FlatContainerStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']"/>
         <ownedDiagramElements xmi:type="diagram:DNode" uid="_Uoj4wLJUEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@agentRole"/>
+          <semanticElements xmi:type="bpmnagentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@agentRole"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_UomVALJUEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/agent-worker.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgentWorker']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgentWorker']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@agentRole"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@agentRole"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" uid="_XFbuYLJVEe-UELN-fG9TRQ" name="Reproduce and fix bug" outgoingEdges="_M_9d0LJWEe-UELN-fG9TRQ" incomingEdges="_K6YRXLJWEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
           <ownedStyle xmi:type="diagram:Square" uid="_XFbuYbJVEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" labelPosition="node" color="255,245,181">
             <description xmi:type="style:SquareDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@flowObjects.0"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@flowObjects.0"/>
         </ownedDiagramElements>
-        <target xmi:type="lu.uni.snt.besser.bpmn-agentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.1"/>
-        <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.1"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_H5sZcLJUEe-UELN-fG9TRQ" name="AgentCoder2">
+        <target xmi:type="bpmnagentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.2"/>
+        <semanticElements xmi:type="bpmnagentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.2"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_H5sZcbJUEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" backgroundColor="255,245,181" foregroundColor="255,245,181">
           <description xmi:type="style:FlatContainerStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']"/>
         <ownedDiagramElements xmi:type="diagram:DNode" uid="_VluEkLJUEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@agentRole"/>
+          <semanticElements xmi:type="bpmnagentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@agentRole"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_VluEkbJUEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/agent-worker.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgentWorker']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgentWorker']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@agentRole"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@agentRole"/>
         </ownedDiagramElements>
         <ownedDiagramElements xmi:type="diagram:DNode" uid="_aspFoLJVEe-UELN-fG9TRQ" name="Reproduce and fix bug" outgoingEdges="_OCDM5LJWEe-UELN-fG9TRQ" incomingEdges="_L-WPzLJWEe-UELN-fG9TRQ" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@flowObjects.0"/>
+          <semanticElements xmi:type="bpmnagentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@flowObjects.0"/>
           <ownedStyle xmi:type="diagram:Square" uid="_aspssLJVEe-UELN-fG9TRQ" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" labelPosition="node" color="255,245,181">
             <description xmi:type="style:SquareDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']"/>
-          <target xmi:type="lu.uni.snt.besser.bpmn-agentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@flowObjects.0"/>
-          <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@flowObjects.0"/>
         </ownedDiagramElements>
-        <target xmi:type="lu.uni.snt.besser.bpmn-agentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.2"/>
-        <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.2"/>
       </ownedDiagramElements>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:Pool" href="My.bpmnagentic#//@elements.0"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:Pool" href="My.bpmnagentic#//@elements.0"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_AqjAQLJWEe-UELN-fG9TRQ" sourceNode="_dofoMLJUEe-UELN-fG9TRQ" targetNode="_8PRu0LJVEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.1"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Aqk1cLJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_AqlcgLJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.1"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.1"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_BUbqwLJWEe-UELN-fG9TRQ" sourceNode="_8PRu0LJVEe-UELN-fG9TRQ" targetNode="_hFZM4LJUEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.2"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.2"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_BUcR0LJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_BUcR0bJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.2"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.2"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Dg139LJWEe-UELN-fG9TRQ" sourceNode="_hFZM4LJUEe-UELN-fG9TRQ" targetNode="_lYCt0LJUEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.3"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.3"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Dg139bJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Dg139rJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.3"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.3"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_EK3sYLJWEe-UELN-fG9TRQ" sourceNode="_lYCt0LJUEe-UELN-fG9TRQ" targetNode="_64hzwLJUEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.4"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.4"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_EK3sYbJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_EK3sYrJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.4"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.4"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_E2rCcLJWEe-UELN-fG9TRQ" name="no" sourceNode="_64hzwLJUEe-UELN-fG9TRQ" targetNode="_Jk2eQLJVEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.5"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.5"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_E2rCcbJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_E2rCcrJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.5"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.5"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_FdJzoLJWEe-UELN-fG9TRQ" name="yes" sourceNode="_64hzwLJUEe-UELN-fG9TRQ" targetNode="_Ej5s4LJVEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.6"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.6"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FdJzobJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FdJzorJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.6"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.6"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KDoPiLJWEe-UELN-fG9TRQ" sourceNode="_Ej5s4LJVEe-UELN-fG9TRQ" targetNode="_UJ80sLJVEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.7"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.7"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KDoPibJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_KDoPirJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.7"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.7"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_K6YRXLJWEe-UELN-fG9TRQ" sourceNode="_UJ80sLJVEe-UELN-fG9TRQ" targetNode="_XFbuYLJVEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.8"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.8"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_K6YRXbJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_K6YRXrJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.8"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.8"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_L-WPzLJWEe-UELN-fG9TRQ" sourceNode="_UJ80sLJVEe-UELN-fG9TRQ" targetNode="_aspFoLJVEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.9"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.9"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_L-WPzbJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_L-WPzrJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.9"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.9"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_M_9d0LJWEe-UELN-fG9TRQ" sourceNode="_XFbuYLJVEe-UELN-fG9TRQ" targetNode="_SBwZILJVEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.10"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.10"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_M_-E0LJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_M_-E0bJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.10"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.10"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_OCDM5LJWEe-UELN-fG9TRQ" sourceNode="_aspFoLJVEe-UELN-fG9TRQ" targetNode="_SBwZILJVEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.11"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.11"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_OCDM5bJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_OCDM5rJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.11"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.11"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_PSFRaLJWEe-UELN-fG9TRQ" sourceNode="_SBwZILJVEe-UELN-fG9TRQ" targetNode="_kVWFQLJVEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.12"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.12"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_PSFRabJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_PSFRarJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.12"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.12"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_RCthhLJWEe-UELN-fG9TRQ" sourceNode="_kVWFQLJVEe-UELN-fG9TRQ" targetNode="_q2T34LJVEe-UELN-fG9TRQ">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.13"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.13"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_RCthhbJWEe-UELN-fG9TRQ" size="0" centered="Both" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_RCthhrJWEe-UELN-fG9TRQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
-      <target xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.13"/>
-      <semanticElements xmi:type="lu.uni.snt.besser.bpmn-agentic:SequenceFlow" href="My.bpmnagentic#//@elements.13"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_jc5FMLJTEe-UELN-fG9TRQ"/>
     <activatedLayers xmi:type="description_1:Layer" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer"/>
-    <target xmi:type="lu.uni.snt.besser.bpmn-agentic:BusinessProcessDiagram" href="My.bpmnagentic#/"/>
+    <target xmi:type="bpmnagentic:BusinessProcessDiagram" href="My.bpmnagentic#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_Kc0vMP6gEe-CRIGIm70ErA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_KdNJsP6gEe-CRIGIm70ErA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_KdNJsf6gEe-CRIGIm70ErA" type="Sirius" element="_Kc0vMP6gEe-CRIGIm70ErA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_KdongP6gEe-CRIGIm70ErA" type="2002" element="_KdO-4P6gEe-CRIGIm70ErA">
+          <children xmi:type="notation:Node" xmi:id="_Kdy_kP6gEe-CRIGIm70ErA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_Kd0NsP6gEe-CRIGIm70ErA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_Kd3RA_6gEe-CRIGIm70ErA" type="3008" element="_KdVslv6gEe-CRIGIm70ErA">
+              <children xmi:type="notation:Node" xmi:id="_Kd34EP6gEe-CRIGIm70ErA" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_Kd34Ef6gEe-CRIGIm70ErA" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_KeXAQP6gEe-CRIGIm70ErA" type="3008" element="_KdW6sP6gEe-CRIGIm70ErA">
+                  <children xmi:type="notation:Node" xmi:id="_KeXAQ_6gEe-CRIGIm70ErA" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_KeXARP6gEe-CRIGIm70ErA" type="7002">
+                    <children xmi:type="notation:Node" xmi:id="_KfGAEP6gEe-CRIGIm70ErA" type="3007" element="_KdW6s_6gEe-CRIGIm70ErA">
+                      <children xmi:type="notation:Node" xmi:id="_KfGAE_6gEe-CRIGIm70ErA" type="5003">
+                        <layoutConstraint xmi:type="notation:Location" xmi:id="_KfGAFP6gEe-CRIGIm70ErA" x="-1"/>
+                      </children>
+                      <children xmi:type="notation:Node" xmi:id="_Kfj6IP6gEe-CRIGIm70ErA" type="3005" element="_KdW6tP6gEe-CRIGIm70ErA">
+                        <styles xmi:type="notation:ShapeStyle" xmi:id="_Kfj6If6gEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kfj6Iv6gEe-CRIGIm70ErA"/>
+                      </children>
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_KfGAEf6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KfGAEv6gEe-CRIGIm70ErA" x="6" y="5" width="30" height="32"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_KfMtwP6gEe-CRIGIm70ErA" type="3007" element="_KdXhwP6gEe-CRIGIm70ErA">
+                      <children xmi:type="notation:Node" xmi:id="_KfNU0P6gEe-CRIGIm70ErA" type="5003">
+                        <layoutConstraint xmi:type="notation:Location" xmi:id="_KfNU0f6gEe-CRIGIm70ErA" x="-1"/>
+                      </children>
+                      <children xmi:type="notation:Node" xmi:id="_KfkhMP6gEe-CRIGIm70ErA" type="3005" element="_KdXhwf6gEe-CRIGIm70ErA">
+                        <styles xmi:type="notation:ShapeStyle" xmi:id="_KfkhMf6gEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KfkhMv6gEe-CRIGIm70ErA"/>
+                      </children>
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_KfMtwf6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KfMtwv6gEe-CRIGIm70ErA" x="90" y="29" width="30" height="30"/>
+                    </children>
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_KeXARf6gEe-CRIGIm70ErA"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_KeXARv6gEe-CRIGIm70ErA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_KeXAQf6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KeXAQv6gEe-CRIGIm70ErA" x="138" y="485" width="231"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_KeXnUP6gEe-CRIGIm70ErA" type="3007" element="_KdXhw_6gEe-CRIGIm70ErA">
+                  <children xmi:type="notation:Node" xmi:id="_KeXnU_6gEe-CRIGIm70ErA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_KeXnVP6gEe-CRIGIm70ErA" x="-10" y="31"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_KfkhM_6gEe-CRIGIm70ErA" type="3005" element="_KdXhxP6gEe-CRIGIm70ErA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_KfkhNP6gEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KfkhNf6gEe-CRIGIm70ErA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_KeXnUf6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KeXnUv6gEe-CRIGIm70ErA" x="238" y="593" width="30" height="30"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_KezFIv6gEe-CRIGIm70ErA" type="3007" element="_KdYv4P6gEe-CRIGIm70ErA">
+                  <children xmi:type="notation:Node" xmi:id="_KezFJf6gEe-CRIGIm70ErA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_KezFJv6gEe-CRIGIm70ErA" x="-63" y="31"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_KfkhPP6gEe-CRIGIm70ErA" type="3005" element="_KdYv4f6gEe-CRIGIm70ErA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_KfkhPf6gEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KfkhPv6gEe-CRIGIm70ErA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_KezFI_6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KezFJP6gEe-CRIGIm70ErA" x="306" y="689" width="30" height="30"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_Ke5Lxf6gEe-CRIGIm70ErA" type="3007" element="_KdZ-AP6gEe-CRIGIm70ErA">
+                  <children xmi:type="notation:Node" xmi:id="_Ke5LyP6gEe-CRIGIm70ErA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_Ke5Lyf6gEe-CRIGIm70ErA" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_KfkhQv6gEe-CRIGIm70ErA" type="3003" element="_KdZ-Af6gEe-CRIGIm70ErA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_KfkhQ_6gEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KfkhRP6gEe-CRIGIm70ErA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_Ke5Lxv6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ke5Lx_6gEe-CRIGIm70ErA" x="54" y="713" width="138" height="72"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_MqbZwP6hEe-CRIGIm70ErA" type="3007" element="_MqSP0P6hEe-CRIGIm70ErA">
+                  <children xmi:type="notation:Node" xmi:id="_MqcA0P6hEe-CRIGIm70ErA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_MqcA0f6hEe-CRIGIm70ErA" x="-1"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_MqjVkP6hEe-CRIGIm70ErA" type="3005" element="_MqS24P6hEe-CRIGIm70ErA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_MqjVkf6hEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MqjVkv6hEe-CRIGIm70ErA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_MqbZwf6hEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MqbZwv6hEe-CRIGIm70ErA" x="209" y="29" width="30" height="47"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_Kd34Ev6gEe-CRIGIm70ErA"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_Kd34E_6gEe-CRIGIm70ErA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Kd3RBP6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kd3RBf6gEe-CRIGIm70ErA" x="594" y="29" width="483" height="963"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Kd4fIP6gEe-CRIGIm70ErA" type="3008" element="_KdWTov6gEe-CRIGIm70ErA">
+              <children xmi:type="notation:Node" xmi:id="_Kd4fI_6gEe-CRIGIm70ErA" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_Kd5GMP6gEe-CRIGIm70ErA" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_KflISP6gEe-CRIGIm70ErA" type="3007" element="_KdbMI_6gEe-CRIGIm70ErA">
+                  <children xmi:type="notation:Node" xmi:id="_KflIS_6gEe-CRIGIm70ErA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_KflITP6gEe-CRIGIm70ErA" x="-1"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_Kfx8kP6gEe-CRIGIm70ErA" type="3005" element="_KdbMJP6gEe-CRIGIm70ErA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_Kfx8kf6gEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kfx8kv6gEe-CRIGIm70ErA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_KflISf6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KflISv6gEe-CRIGIm70ErA" x="126" y="29" width="30" height="47"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_dAVtsP6gEe-CRIGIm70ErA" type="3007" element="_c__IYP6gEe-CRIGIm70ErA">
+                  <children xmi:type="notation:Node" xmi:id="_dAWUwP6gEe-CRIGIm70ErA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_dAWUwf6gEe-CRIGIm70ErA" x="-57" y="31"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_dAb0UP6gEe-CRIGIm70ErA" type="3005" element="_c__IYf6gEe-CRIGIm70ErA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_dAb0Uf6gEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dAb0Uv6gEe-CRIGIm70ErA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_dAVtsf6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dAVtsv6gEe-CRIGIm70ErA" x="126" y="113" width="30" height="30"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_hnTRwP6gEe-CRIGIm70ErA" type="3008" element="_hm5pIP6gEe-CRIGIm70ErA">
+                  <children xmi:type="notation:Node" xmi:id="_hnTRw_6gEe-CRIGIm70ErA" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_hnTRxP6gEe-CRIGIm70ErA" type="7002">
+                    <children xmi:type="notation:Node" xmi:id="_lTBVkP6gEe-CRIGIm70ErA" type="3007" element="_lSwP0P6gEe-CRIGIm70ErA">
+                      <children xmi:type="notation:Node" xmi:id="_lTBVk_6gEe-CRIGIm70ErA" type="5003">
+                        <layoutConstraint xmi:type="notation:Location" xmi:id="_lTBVlP6gEe-CRIGIm70ErA" x="-1"/>
+                      </children>
+                      <children xmi:type="notation:Node" xmi:id="_lTOJ4P6gEe-CRIGIm70ErA" type="3005" element="_lSw24P6gEe-CRIGIm70ErA">
+                        <styles xmi:type="notation:ShapeStyle" xmi:id="_lTOJ4f6gEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lTOJ4v6gEe-CRIGIm70ErA"/>
+                      </children>
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_lTBVkf6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lTBVkv6gEe-CRIGIm70ErA" x="90" y="29" width="30" height="30"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_mIVM8P6gEe-CRIGIm70ErA" type="3007" element="_mII_sP6gEe-CRIGIm70ErA">
+                      <children xmi:type="notation:Node" xmi:id="_mIVM8_6gEe-CRIGIm70ErA" type="5003">
+                        <layoutConstraint xmi:type="notation:Location" xmi:id="_mIVM9P6gEe-CRIGIm70ErA" x="-1"/>
+                      </children>
+                      <children xmi:type="notation:Node" xmi:id="_mIasgP6gEe-CRIGIm70ErA" type="3005" element="_mII_sf6gEe-CRIGIm70ErA">
+                        <styles xmi:type="notation:ShapeStyle" xmi:id="_mIasgf6gEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mIasgv6gEe-CRIGIm70ErA"/>
+                      </children>
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_mIVM8f6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mIVM8v6gEe-CRIGIm70ErA" x="6" y="4" width="30" height="32"/>
+                    </children>
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_hnTRxf6gEe-CRIGIm70ErA"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_hnTRxv6gEe-CRIGIm70ErA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_hnTRwf6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hnTRwv6gEe-CRIGIm70ErA" x="30" y="185" width="243" height="82"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_Kd5GMf6gEe-CRIGIm70ErA"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_Kd5GMv6gEe-CRIGIm70ErA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Kd4fIf6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kd4fIv6gEe-CRIGIm70ErA" x="6" y="29" width="303" height="963"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Kd5GM_6gEe-CRIGIm70ErA" type="3008" element="_KdWTpf6gEe-CRIGIm70ErA">
+              <children xmi:type="notation:Node" xmi:id="_Kd5GNv6gEe-CRIGIm70ErA" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_Kd5GN_6gEe-CRIGIm70ErA" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_Kfx8k_6gEe-CRIGIm70ErA" type="3007" element="_KdcaQP6gEe-CRIGIm70ErA">
+                  <children xmi:type="notation:Node" xmi:id="_Kfx8lv6gEe-CRIGIm70ErA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_Kfx8l_6gEe-CRIGIm70ErA" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_Kf7GgP6gEe-CRIGIm70ErA" type="3003" element="_KdcaQf6gEe-CRIGIm70ErA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_Kf7Ggf6gEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kf7Ggv6gEe-CRIGIm70ErA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_Kfx8lP6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kfx8lf6gEe-CRIGIm70ErA" x="66" y="329" width="120" height="72"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_Kfx8mP6gEe-CRIGIm70ErA" type="3007" element="_KdcaQ_6gEe-CRIGIm70ErA">
+                  <children xmi:type="notation:Node" xmi:id="_Kfx8m_6gEe-CRIGIm70ErA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_Kfx8nP6gEe-CRIGIm70ErA" x="-1"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_Kf7Gg_6gEe-CRIGIm70ErA" type="3005" element="_KdcaRP6gEe-CRIGIm70ErA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_Kf7GhP6gEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kf7Ghf6gEe-CRIGIm70ErA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_Kfx8mf6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kfx8mv6gEe-CRIGIm70ErA" x="90" y="29" width="30" height="47"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_yk9swP6gEe-CRIGIm70ErA" type="3007" element="_ykr_8P6gEe-CRIGIm70ErA">
+                  <children xmi:type="notation:Node" xmi:id="_yk9sw_6gEe-CRIGIm70ErA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_yk9sxP6gEe-CRIGIm70ErA" x="-1"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_ylDMUP6gEe-CRIGIm70ErA" type="3005" element="_ykr_8f6gEe-CRIGIm70ErA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_ylDMUf6gEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ylDMUv6gEe-CRIGIm70ErA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_yk9swf6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yk9swv6gEe-CRIGIm70ErA" x="111" y="425" width="30" height="30"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_HHG7IP6hEe-CRIGIm70ErA" type="3007" element="_HG3qkP6hEe-CRIGIm70ErA">
+                  <children xmi:type="notation:Node" xmi:id="_HHG7I_6hEe-CRIGIm70ErA" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_HHG7JP6hEe-CRIGIm70ErA" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_HHG7Jf6hEe-CRIGIm70ErA" type="3003" element="_HG4RoP6hEe-CRIGIm70ErA">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_HHG7Jv6hEe-CRIGIm70ErA" fontName="Segoe UI"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HHG7J_6hEe-CRIGIm70ErA"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_HHG7If6hEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HHG7Iv6hEe-CRIGIm70ErA" x="54" y="701" width="156" height="84"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_Kd5GOP6gEe-CRIGIm70ErA"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_Kd5GOf6gEe-CRIGIm70ErA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Kd5GNP6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kd5GNf6gEe-CRIGIm70ErA" x="318" y="29" width="267" height="951"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_Kd0Nsf6gEe-CRIGIm70ErA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_Kd0Nsv6gEe-CRIGIm70ErA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Kdongf6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kdongv6gEe-CRIGIm70ErA" x="12" y="-12" width="1094" height="1047"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_KdNJsv6gEe-CRIGIm70ErA"/>
+        <edges xmi:type="notation:Edge" xmi:id="_KgB0PP6gEe-CRIGIm70ErA" type="4001" element="_KdfdkP6gEe-CRIGIm70ErA" source="_KeXAQP6gEe-CRIGIm70ErA" target="_KeXnUP6gEe-CRIGIm70ErA">
+          <children xmi:type="notation:Node" xmi:id="_KgB0QP6gEe-CRIGIm70ErA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KgB0Qf6gEe-CRIGIm70ErA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KgB0Qv6gEe-CRIGIm70ErA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KgB0Q_6gEe-CRIGIm70ErA" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KgCbQP6gEe-CRIGIm70ErA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KgCbQf6gEe-CRIGIm70ErA" x="-1" y="-9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_KgB0Pf6gEe-CRIGIm70ErA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_KgB0Pv6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KgB0P_6gEe-CRIGIm70ErA" points="[0, 37, -1, -50]$[0, 72, -1, -15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KgCbQv6gEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KgCbQ_6gEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_KgCbRP6gEe-CRIGIm70ErA" type="4001" element="_Kdfdlf6gEe-CRIGIm70ErA" source="_KeXnUP6gEe-CRIGIm70ErA" target="_KezFIv6gEe-CRIGIm70ErA">
+          <children xmi:type="notation:Node" xmi:id="_KgCbSP6gEe-CRIGIm70ErA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KgCbSf6gEe-CRIGIm70ErA" x="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KgCbSv6gEe-CRIGIm70ErA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KgCbS_6gEe-CRIGIm70ErA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KgCbTP6gEe-CRIGIm70ErA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KgCbTf6gEe-CRIGIm70ErA" x="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_KgCbRf6gEe-CRIGIm70ErA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_KgCbRv6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KgCbR_6gEe-CRIGIm70ErA" points="[12, 0, -56, -96]$[68, 0, 0, -96]$[68, 82, 0, -14]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KgCbTv6gEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KgCbT_6gEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_KgCbUP6gEe-CRIGIm70ErA" type="4001" element="_KdgEov6gEe-CRIGIm70ErA" source="_KeXnUP6gEe-CRIGIm70ErA" target="_Ke5Lxf6gEe-CRIGIm70ErA">
+          <children xmi:type="notation:Node" xmi:id="_KgCbVP6gEe-CRIGIm70ErA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KgCbVf6gEe-CRIGIm70ErA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KgCbVv6gEe-CRIGIm70ErA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KgCbV_6gEe-CRIGIm70ErA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KgCbWP6gEe-CRIGIm70ErA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KgCbWf6gEe-CRIGIm70ErA" x="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_KgCbUf6gEe-CRIGIm70ErA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_KgCbUv6gEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KgCbU_6gEe-CRIGIm70ErA" points="[-12, 0, 118, -141]$[-130, 0, 0, -141]$[-130, 105, 0, -36]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KgDCUP6gEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KgDCUf6gEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_Om9-8P6hEe-CRIGIm70ErA" type="4001" element="_Omzm5P6hEe-CRIGIm70ErA" source="_dAVtsP6gEe-CRIGIm70ErA" target="_hnTRwP6gEe-CRIGIm70ErA">
+          <children xmi:type="notation:Node" xmi:id="_Om-mAP6hEe-CRIGIm70ErA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Om-mAf6hEe-CRIGIm70ErA" x="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Om-mAv6hEe-CRIGIm70ErA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Om-mA_6hEe-CRIGIm70ErA" x="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Om-mBP6hEe-CRIGIm70ErA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Om-mBf6hEe-CRIGIm70ErA" x="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Om9-8f6hEe-CRIGIm70ErA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Om9-8v6hEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Om9-8_6hEe-CRIGIm70ErA" points="[0, 13, -9, -84]$[0, 42, -9, -55]$[0, 57, -9, -40]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Om-mBv6hEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Om-mB_6hEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_P00SIP6hEe-CRIGIm70ErA" type="4001" element="_P0uykP6hEe-CRIGIm70ErA" source="_hnTRwP6gEe-CRIGIm70ErA" target="_Kfx8k_6gEe-CRIGIm70ErA">
+          <children xmi:type="notation:Node" xmi:id="_P00SJP6hEe-CRIGIm70ErA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P00SJf6hEe-CRIGIm70ErA" x="6" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_P00SJv6hEe-CRIGIm70ErA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P00SJ_6hEe-CRIGIm70ErA" x="1" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_P00SKP6hEe-CRIGIm70ErA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_P00SKf6hEe-CRIGIm70ErA" x="19" y="13"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_P00SIf6hEe-CRIGIm70ErA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_P00SIv6hEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_P00SI_6hEe-CRIGIm70ErA" points="[-11, 40, -299, -100]$[-11, 68, -299, -72]$[288, 68, 0, -72]$[288, 104, 0, -36]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_P00SKv6hEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_P00SK_6hEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_RmjVgP6hEe-CRIGIm70ErA" type="4001" element="_RmedBP6hEe-CRIGIm70ErA" source="_Kfx8k_6gEe-CRIGIm70ErA" target="_yk9swP6gEe-CRIGIm70ErA">
+          <children xmi:type="notation:Node" xmi:id="_RmjVhP6hEe-CRIGIm70ErA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RmjVhf6hEe-CRIGIm70ErA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_RmjVhv6hEe-CRIGIm70ErA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RmjVh_6hEe-CRIGIm70ErA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_RmjViP6hEe-CRIGIm70ErA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RmjVif6hEe-CRIGIm70ErA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_RmjVgf6hEe-CRIGIm70ErA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_RmjVgv6hEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RmjVg_6hEe-CRIGIm70ErA" points="[0, 36, 0, -39]$[0, 60, 0, -15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Rmj8kP6hEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Rmj8kf6hEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_S7iLcP6hEe-CRIGIm70ErA" type="4001" element="_S7dS-P6hEe-CRIGIm70ErA" source="_yk9swP6gEe-CRIGIm70ErA" target="_KeXAQP6gEe-CRIGIm70ErA">
+          <children xmi:type="notation:Node" xmi:id="_S7iygP6hEe-CRIGIm70ErA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S7iygf6hEe-CRIGIm70ErA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_S7iygv6hEe-CRIGIm70ErA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S7iyg_6hEe-CRIGIm70ErA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_S7iyhP6hEe-CRIGIm70ErA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S7iyhf6hEe-CRIGIm70ErA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_S7iLcf6hEe-CRIGIm70ErA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_S7iLcv6hEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_S7iLc_6hEe-CRIGIm70ErA" points="[12, 0, -390, -81]$[396, 0, -6, -81]$[396, 45, -6, -36]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_S7iyhv6hEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_S7iyh_6hEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_UEIyQP6hEe-CRIGIm70ErA" type="4001" element="_UEDStP6hEe-CRIGIm70ErA" source="_Ke5Lxf6gEe-CRIGIm70ErA" target="_HHG7IP6hEe-CRIGIm70ErA">
+          <children xmi:type="notation:Node" xmi:id="_UEIyRP6hEe-CRIGIm70ErA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEIyRf6hEe-CRIGIm70ErA" x="-6" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_UEIyRv6hEe-CRIGIm70ErA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEIyR_6hEe-CRIGIm70ErA" x="-14" y="-7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_UEIySP6hEe-CRIGIm70ErA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEIySf6hEe-CRIGIm70ErA" x="-10" y="-10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_UEIyQf6hEe-CRIGIm70ErA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_UEIyQv6hEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UEIyQ_6hEe-CRIGIm70ErA" points="[-9, 36, 258, 42]$[-9, 72, 258, 78]$[-273, 72, -6, 78]$[-273, 48, -6, 54]$[-273, 36, -6, 42]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UEIySv6hEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UEIyS_6hEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_V_ymoP6hEe-CRIGIm70ErA" type="4001" element="_V_rR4P6hEe-CRIGIm70ErA" source="_HHG7IP6hEe-CRIGIm70ErA" target="_yk9swP6gEe-CRIGIm70ErA">
+          <children xmi:type="notation:Node" xmi:id="_V_ympP6hEe-CRIGIm70ErA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V_ympf6hEe-CRIGIm70ErA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_V_ympv6hEe-CRIGIm70ErA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V_ymp_6hEe-CRIGIm70ErA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_V_ymqP6hEe-CRIGIm70ErA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V_ymqf6hEe-CRIGIm70ErA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_V_ymof6hEe-CRIGIm70ErA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_V_ymov6hEe-CRIGIm70ErA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_V_ymo_6hEe-CRIGIm70ErA" points="[-1, -42, 5, 261]$[-6, -288, 0, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V_zNsP6hEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V_zNsf6hEe-CRIGIm70ErA" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_KdjH8P6gEe-CRIGIm70ErA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_KdjvAP6gEe-CRIGIm70ErA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_KdO-4P6gEe-CRIGIm70ErA" name="ChatGPT">
+      <target xmi:type="bpmnagentic:Pool" href="My.bpmnagentic#//@elements.0"/>
+      <semanticElements xmi:type="bpmnagentic:Pool" href="My.bpmnagentic#//@elements.0"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_KdPl8P6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" backgroundColor="255,245,181" foregroundColor="255,245,181">
+        <description xmi:type="style:FlatContainerStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_KdVslv6gEe-CRIGIm70ErA" name="AgentTester">
+        <target xmi:type="bpmnagentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.0"/>
+        <semanticElements xmi:type="bpmnagentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_KdWToP6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" backgroundColor="255,245,181" foregroundColor="255,245,181">
+          <description xmi:type="style:FlatContainerStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_KdW6sP6gEe-CRIGIm70ErA" name="Inspect code" outgoingEdges="_KdfdkP6gEe-CRIGIm70ErA" incomingEdges="_S7dS-P6hEe-CRIGIm70ErA">
+          <target xmi:type="bpmnagentic:AgenticTask" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0"/>
+          <semanticElements xmi:type="bpmnagentic:AgenticTask" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_KdW6sf6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" backgroundColor="255,245,181" foregroundColor="255,245,181">
+            <description xmi:type="style:FlatContainerStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']"/>
+          <ownedDiagramElements xmi:type="diagram:DNode" uid="_KdW6s_6gEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+            <target xmi:type="bpmnagentic:Agentic" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0/@agentic"/>
+            <semanticElements xmi:type="bpmnagentic:Agentic" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0/@agentic"/>
+            <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_KdW6tP6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/agent.svg">
+              <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Agentic']/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Agentic']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" uid="_KdXhwP6gEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+            <target xmi:type="bpmnagentic:SelfReflection" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0/@reflectionMode"/>
+            <semanticElements xmi:type="bpmnagentic:SelfReflection" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.0/@reflectionMode"/>
+            <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_KdXhwf6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/reflection-self.svg">
+              <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20SelfReflection']/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20SelfReflection']"/>
+          </ownedDiagramElements>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_KdXhw_6gEe-CRIGIm70ErA" name="valid?" outgoingEdges="_Kdfdlf6gEe-CRIGIm70ErA _KdgEov6gEe-CRIGIm70ErA" incomingEdges="_KdfdkP6gEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:XOR" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.1"/>
+          <semanticElements xmi:type="bpmnagentic:XOR" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.1"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_KdXhxP6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/xor-gateway.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20XOR']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20XOR']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_KdYv4P6gEe-CRIGIm70ErA" name="Send code to user" incomingEdges="_Kdfdlf6gEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:EndEvent" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.3"/>
+          <semanticElements xmi:type="bpmnagentic:EndEvent" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.3"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_KdYv4f6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/end-event.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20End%20Event']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20End%20Event']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_KdZ-AP6gEe-CRIGIm70ErA" name="Provide test report" outgoingEdges="_UEDStP6hEe-CRIGIm70ErA" incomingEdges="_KdgEov6gEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.2"/>
+          <semanticElements xmi:type="bpmnagentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@flowObjects.2"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_KdZ-Af6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" labelPosition="node" color="255,245,181">
+            <description xmi:type="style:SquareDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_MqSP0P6hEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@agentRole"/>
+          <semanticElements xmi:type="bpmnagentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.0/@agentRole"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_MqS24P6hEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/agent-worker.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgentWorker']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgentWorker']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_KdWTov6gEe-CRIGIm70ErA" name="AgentAnalyst">
+        <target xmi:type="bpmnagentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.1"/>
+        <semanticElements xmi:type="bpmnagentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_KdWTo_6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" backgroundColor="255,245,181" foregroundColor="255,245,181">
+          <description xmi:type="style:FlatContainerStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_KdbMI_6gEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@agentRole"/>
+          <semanticElements xmi:type="bpmnagentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@agentRole"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_KdbMJP6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/agent-worker.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgentWorker']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgentWorker']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_c__IYP6gEe-CRIGIm70ErA" name="Prompt received" outgoingEdges="_Omzm5P6hEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:StartEvent" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@flowObjects.0"/>
+          <semanticElements xmi:type="bpmnagentic:StartEvent" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@flowObjects.0"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_c__IYf6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/start-event.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Start%20Event']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Start%20Event']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_hm5pIP6gEe-CRIGIm70ErA" name="Decompose tasks" outgoingEdges="_P0uykP6hEe-CRIGIm70ErA" incomingEdges="_Omzm5P6hEe-CRIGIm70ErA">
+          <target xmi:type="bpmnagentic:AgenticTask" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@flowObjects.1"/>
+          <semanticElements xmi:type="bpmnagentic:AgenticTask" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@flowObjects.1"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_hm5pIf6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" backgroundColor="255,245,181" foregroundColor="255,245,181">
+            <description xmi:type="style:FlatContainerStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']"/>
+          <ownedDiagramElements xmi:type="diagram:DNode" uid="_lSwP0P6gEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+            <target xmi:type="bpmnagentic:SelfReflection" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@flowObjects.1/@reflectionMode"/>
+            <semanticElements xmi:type="bpmnagentic:SelfReflection" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@flowObjects.1/@reflectionMode"/>
+            <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_lSw24P6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/reflection-self.svg">
+              <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20SelfReflection']/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20SelfReflection']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" uid="_mII_sP6gEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+            <target xmi:type="bpmnagentic:Agentic" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@flowObjects.1/@agentic"/>
+            <semanticElements xmi:type="bpmnagentic:Agentic" href="My.bpmnagentic#//@elements.0/@agenticLanes.1/@flowObjects.1/@agentic"/>
+            <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_mII_sf6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/agent.svg">
+              <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Agentic']/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Pool%20-%20AgenticLane%20-%20AgenticTask%20-%20Agentic']"/>
+          </ownedDiagramElements>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_KdWTpf6gEe-CRIGIm70ErA" name="AgentCoder">
+        <target xmi:type="bpmnagentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.2"/>
+        <semanticElements xmi:type="bpmnagentic:AgenticLane" href="My.bpmnagentic#//@elements.0/@agenticLanes.2"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_KdWTpv6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" backgroundColor="255,245,181" foregroundColor="255,245,181">
+          <description xmi:type="style:FlatContainerStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_KdcaQP6gEe-CRIGIm70ErA" name="Write code" outgoingEdges="_RmedBP6hEe-CRIGIm70ErA" incomingEdges="_P0uykP6hEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@flowObjects.0"/>
+          <semanticElements xmi:type="bpmnagentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@flowObjects.0"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_KdcaQf6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" labelPosition="node" color="255,245,181">
+            <description xmi:type="style:SquareDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_HG3qkP6hEe-CRIGIm70ErA" name="Review and refine code" outgoingEdges="_V_rR4P6hEe-CRIGIm70ErA" incomingEdges="_UEDStP6hEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@flowObjects.2"/>
+          <semanticElements xmi:type="bpmnagentic:Activity" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@flowObjects.2"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_HG4RoP6hEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="aql:2" labelPosition="node" color="255,245,181">
+            <description xmi:type="style:SquareDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20Activity']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_KdcaQ_6gEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@agentRole"/>
+          <semanticElements xmi:type="bpmnagentic:AgentWorker" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@agentRole"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_KdcaRP6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/agent-worker.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgentWorker']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20AgentWorker']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_ykr_8P6gEe-CRIGIm70ErA" outgoingEdges="_S7dS-P6hEe-CRIGIm70ErA" incomingEdges="_RmedBP6hEe-CRIGIm70ErA _V_rR4P6hEe-CRIGIm70ErA" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="bpmnagentic:XOR" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@flowObjects.1"/>
+          <semanticElements xmi:type="bpmnagentic:XOR" href="My.bpmnagentic#//@elements.0/@agenticLanes.2/@flowObjects.1"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_ykr_8f6gEe-CRIGIm70ErA" labelSize="12" showIcon="false" borderSizeComputationExpression="aql:0" workspacePath="lu.uni.snt.besser.bpmn-agentic/svg/xor-gateway.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20XOR']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@containerMappings[name='BPD%20-%20Pool']/@subContainerMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane']/@subNodeMappings[name='BPD%20-%20Pool%20-%20Pool%20-%20AgenticLane%20-%20Pool%20-%20AgenticLane%20-%20XOR']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KdfdkP6gEe-CRIGIm70ErA" sourceNode="_KdW6sP6gEe-CRIGIm70ErA" targetNode="_KdXhw_6gEe-CRIGIm70ErA">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.4"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Kdfdkf6gEe-CRIGIm70ErA" size="0" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Kdfdkv6gEe-CRIGIm70ErA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Kdfdlf6gEe-CRIGIm70ErA" name="yes" sourceNode="_KdXhw_6gEe-CRIGIm70ErA" targetNode="_KdYv4P6gEe-CRIGIm70ErA">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.5"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.5"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Kdfdlv6gEe-CRIGIm70ErA" size="0" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Kdfdl_6gEe-CRIGIm70ErA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KdgEov6gEe-CRIGIm70ErA" name="no" sourceNode="_KdXhw_6gEe-CRIGIm70ErA" targetNode="_KdZ-AP6gEe-CRIGIm70ErA">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.6"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.6"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_KdgEo_6gEe-CRIGIm70ErA" size="0" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_KdgEpP6gEe-CRIGIm70ErA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Omzm5P6hEe-CRIGIm70ErA" sourceNode="_c__IYP6gEe-CRIGIm70ErA" targetNode="_hm5pIP6gEe-CRIGIm70ErA">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.14"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.14"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Omzm5f6hEe-CRIGIm70ErA" size="0" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Omzm5v6hEe-CRIGIm70ErA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_P0uykP6hEe-CRIGIm70ErA" sourceNode="_hm5pIP6gEe-CRIGIm70ErA" targetNode="_KdcaQP6gEe-CRIGIm70ErA">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.15"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.15"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_P0uykf6hEe-CRIGIm70ErA" size="0" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_P0uykv6hEe-CRIGIm70ErA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_RmedBP6hEe-CRIGIm70ErA" sourceNode="_KdcaQP6gEe-CRIGIm70ErA" targetNode="_ykr_8P6gEe-CRIGIm70ErA">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.16"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.16"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_RmedBf6hEe-CRIGIm70ErA" size="0" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_RmedBv6hEe-CRIGIm70ErA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_S7dS-P6hEe-CRIGIm70ErA" sourceNode="_ykr_8P6gEe-CRIGIm70ErA" targetNode="_KdW6sP6gEe-CRIGIm70ErA">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.17"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.17"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_S7d6AP6hEe-CRIGIm70ErA" size="0" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_S7d6Af6hEe-CRIGIm70ErA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_UEDStP6hEe-CRIGIm70ErA" sourceNode="_KdZ-AP6gEe-CRIGIm70ErA" targetNode="_HG3qkP6hEe-CRIGIm70ErA">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.18"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.18"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_UEDStf6hEe-CRIGIm70ErA" size="0" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_UEDStv6hEe-CRIGIm70ErA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_V_rR4P6hEe-CRIGIm70ErA" sourceNode="_HG3qkP6hEe-CRIGIm70ErA" targetNode="_ykr_8P6gEe-CRIGIm70ErA">
+      <target xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.19"/>
+      <semanticElements xmi:type="bpmnagentic:SequenceFlow" href="My.bpmnagentic#//@elements.19"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_V_rR4f6hEe-CRIGIm70ErA" size="0" centered="Both" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_V_rR4v6hEe-CRIGIm70ErA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer/@edgeMappings[name='Sequence%20Flow']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_Kc1WQP6gEe-CRIGIm70ErA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="../description/BPMNagentic.odesign#//@ownedViewpoints[name='BPMNagentic']/@ownedRepresentations[name='BPD']/@defaultLayer"/>
+    <target xmi:type="bpmnagentic:BusinessProcessDiagram" href="My.bpmnagentic#/"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>
