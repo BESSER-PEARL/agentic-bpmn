@@ -1,4 +1,4 @@
-This repository provides the implementation of the BPMN extension proposed in the paper *"Towards Modeling Human-Agentic Collaborative Workflows: A BPMN Extension"*, submitted for review to the International Conference on Advanced Information Systems Engineering (CAiSE) 2025.
+This repository provides the implementation of the BPMN extension proposed in the paper *"Towards Modeling Human-Agentic Collaborative Workflows: A BPMN Extension"*, submitted for review to the Business Process Modeling, Development, and Support (BPMDS) Working Conference 2025.
 
 # Contents
 
