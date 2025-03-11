@@ -1,4 +1,4 @@
-This repository provides the implementation of the BPMN extension proposed in the paper *"Towards Modeling Human-Agentic Collaborative Workflows: A BPMN Extension"*, submitted for review to the International Conference on Advanced Information Systems Engineering (CAiSE) 2025.
+This repository provides the implementation of the BPMN extension proposed in the paper *"Towards Modeling Human-Agentic Collaborative Workflows: A BPMN Extension"*, submitted for review to the Business Process Modeling, Development, and Support (BPMDS) Working Conference 2025.
 
 # Contents
 
@@ -32,4 +32,12 @@ In the "Representations" list expand the "BPD" and double-click on "Running Exam
 Then, the running example should be displayed as in the following screenshot:
 
 ![aconite-example](https://github.com/user-attachments/assets/d33ce55f-ac98-4a77-96bc-2f6ca1b1ee8b)
+
+### Further implementations
+
+We have developed a proof-of-concept and use that prototype to model several human-agent examples found in the literature. 
+These are also provided in the `model` folder, shared also as an image (.jpg) for accessibility purposes.
+These implementations answer to the need we found in the literature for our extension:
+* "[Self-collaboration Code Generation via ChatGPT]([url](https://arxiv.org/pdf/2304.07590))": This paper propose several instances of ChatGPT to simulate a waterfall development process of code, having a requirements analyst, a coder and a tester agent. We used our notation to represent the workflow defined in their self-collaboration framework.
+* "[Multi-Agent Collaboration Mechanisms: A Survey of LLMs]([url](https://arxiv.org/abs/2501.06322))": In Section 5.2, the author show one of the applications of agent collaboration (A customer service, focused on Q&A). However, they do not use any standard notation to display the workflow. Thus, we used our notation to model the example, introducing human reflection for the Q&A where the agents need the user input.
 
