@@ -41,3 +41,10 @@ These implementations answer to the need we found in the literature for our exte
 * "[Self-collaboration Code Generation via ChatGPT]([url](https://arxiv.org/pdf/2304.07590))": This paper propose several instances of ChatGPT to simulate a waterfall development process of code, having a requirements analyst, a coder and a tester agent. We used our notation to represent the workflow defined in their self-collaboration framework.
 * "[Multi-Agent Collaboration Mechanisms: A Survey of LLMs]([url](https://arxiv.org/abs/2501.06322))": In Section 5.2, the author show one of the applications of agent collaboration (A customer service, focused on Q&A). However, they do not use any standard notation to display the workflow. Thus, we used our notation to model the example, introducing human reflection for the Q&A where the agents need the user input.
 
+Additionally, to showcase different collaboration scenarios we provide toy examples for competition, debate-, and role-based cooperation.
+These toy examples are also available in the `model` folder as an image, or from the `representation.aird` file. 
+The scenarios showcase three different ways to generate code from user request:
+* `Toy_competition`: We set two agents to compete and obtain the code from the agent that finish fastest.
+* `Toy_debate`: We set two agents to generate the code, and let them debate and decide by majority the code that is provided to the user.
+* `Toy_role`: We set three agents to portray three different roles (i.e., requirements engineer, coder, and tester). The solution is a composed output from the three agents.
+
