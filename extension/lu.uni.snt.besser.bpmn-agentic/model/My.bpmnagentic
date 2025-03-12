@@ -2,49 +2,64 @@
 <bpmnagentic:BusinessProcessDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmnagentic="http://lu.uni.snt.besser.bpmn-agentic">
   <elements xsi:type="bpmnagentic:Pool" name="Customer Service">
     <lanes name="User">
-      <flowObjects xsi:type="bpmnagentic:StartEvent" name=""/>
-      <flowObjects xsi:type="bpmnagentic:Activity" name="Make a new order"/>
-      <flowObjects xsi:type="bpmnagentic:XOR" name="User agree"/>
-      <flowObjects xsi:type="bpmnagentic:EndEvent" name="Order confirmed"/>
-      <flowObjects xsi:type="bpmnagentic:EndEvent" name="Order cancelled"/>
+      <flowObjects xsi:type="bpmnagentic:StartEvent"/>
+      <flowObjects xsi:type="bpmnagentic:Activity" name="New code request"/>
+      <flowObjects xsi:type="bpmnagentic:EndEvent" name="Code provided"/>
     </lanes>
-    <agenticLanes name="TriageAgent" uncertainty="0.93">
-      <flowObjects xsi:type="bpmnagentic:AgenticTask" name="Ask claryfing questions">
-        <agentic/>
-        <reflectionMode xsi:type="bpmnagentic:HumanReflection"/>
-      </flowObjects>
-      <flowObjects xsi:type="bpmnagentic:XOR" name="Sale intent determined"/>
+    <agenticLanes name="CoderAgent1" uncertainty="80.0">
+      <flowObjects xsi:type="bpmnagentic:Activity" name="Provide requested code"/>
+      <flowObjects xsi:type="bpmnagentic:DivergingAgenticANDDebate"/>
+      <flowObjects xsi:type="bpmnagentic:MergingAgenticANDVotingMajority"/>
+      <agentRole xsi:type="bpmnagentic:AgentWorker"/>
     </agenticLanes>
-    <agenticLanes name="SaleAgent" uncertainty="0.82">
-      <flowObjects xsi:type="bpmnagentic:AgenticTask" name="Drop price">
-        <agentic/>
-        <reflectionMode xsi:type="bpmnagentic:HumanReflection"/>
-      </flowObjects>
+    <agenticLanes name="CoderAgent2" uncertainty="73.0">
+      <flowObjects xsi:type="bpmnagentic:Activity" name="Provide requested code"/>
       <agentRole xsi:type="bpmnagentic:AgentWorker"/>
     </agenticLanes>
   </elements>
   <elements xsi:type="bpmnagentic:SequenceFlow"/>
   <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" name="yes"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" name="no"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" name="no"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" name="yes"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@lanes.0/@flowObjects.0" to="//@elements.0/@lanes.0/@flowObjects.1"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@lanes.0/@flowObjects.1"/>
   <elements xsi:type="bpmnagentic:SequenceFlow" to="//@elements.0/@agenticLanes.0/@flowObjects.0"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@agenticLanes.0/@flowObjects.0" to="//@elements.0/@agenticLanes.0/@flowObjects.1"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow" name="yes" from="//@elements.0/@agenticLanes.0/@flowObjects.1" to="//@elements.0/@agenticLanes.1/@flowObjects.0"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow" name="no" from="//@elements.0/@agenticLanes.0/@flowObjects.1" to="//@elements.0/@agenticLanes.0/@flowObjects.0"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@agenticLanes.0/@flowObjects.0"/>
   <elements xsi:type="bpmnagentic:SequenceFlow" to="//@elements.0/@agenticLanes.1/@flowObjects.0"/>
   <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@agenticLanes.1/@flowObjects.0"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" to="//@elements.0/@lanes.0/@flowObjects.2"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@lanes.0/@flowObjects.1"/>
   <elements xsi:type="bpmnagentic:SequenceFlow" to="//@elements.0/@agenticLanes.0/@flowObjects.0"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" to="//@elements.0/@agenticLanes.1/@flowObjects.0"/>
   <elements xsi:type="bpmnagentic:SequenceFlow"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@agenticLanes.0/@flowObjects.0"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@agenticLanes.1/@flowObjects.0"/>
   <elements xsi:type="bpmnagentic:SequenceFlow"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@lanes.0/@flowObjects.0" to="//@elements.0/@lanes.0/@flowObjects.1"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@lanes.0/@flowObjects.1" to="//@elements.0/@agenticLanes.0/@flowObjects.0"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@agenticLanes.1/@flowObjects.0" to="//@elements.0/@lanes.0/@flowObjects.2"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow" name="no" from="//@elements.0/@lanes.0/@flowObjects.2" to="//@elements.0/@lanes.0/@flowObjects.4"/>
-  <elements xsi:type="bpmnagentic:SequenceFlow" name="yes" from="//@elements.0/@lanes.0/@flowObjects.2" to="//@elements.0/@lanes.0/@flowObjects.3"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" to="//@elements.0/@lanes.0/@flowObjects.2"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@lanes.0/@flowObjects.1" to="//@elements.0/@agenticLanes.0/@flowObjects.1"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@agenticLanes.0/@flowObjects.1" to="//@elements.0/@agenticLanes.0/@flowObjects.0"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@agenticLanes.0/@flowObjects.1" to="//@elements.0/@agenticLanes.1/@flowObjects.0"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@agenticLanes.1/@flowObjects.0" to="//@elements.0/@agenticLanes.0/@flowObjects.2"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@agenticLanes.0/@flowObjects.0" to="//@elements.0/@agenticLanes.0/@flowObjects.2"/>
+  <elements xsi:type="bpmnagentic:SequenceFlow" from="//@elements.0/@agenticLanes.0/@flowObjects.2" to="//@elements.0/@lanes.0/@flowObjects.2"/>
 </bpmnagentic:BusinessProcessDiagram>
