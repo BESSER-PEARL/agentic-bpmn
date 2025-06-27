@@ -1,4 +1,4 @@
-This repository provides the implementation of the BPMN extension proposed in the paper *"Towards Modeling Human-Agentic Collaborative Workflows: A BPMN Extension"*, submitted for review to the Euromicro Conference Series on Software Engineering and Advanced Applications (SEAA) 2025.
+This repository provides the implementation of the BPMN extension proposed in the paper *"Towards Modeling Human-Agentic Collaborative Workflows: A BPMN Extension"*, accepted in the Euromicro Conference Series on Software Engineering and Advanced Applications (SEAA) 2025.
 
 # Contents
 
